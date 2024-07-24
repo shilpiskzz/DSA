@@ -15,7 +15,7 @@ public:
 
     void print()
     {
-        cout << numerator << "/" << denominator << endl;
+        cout << this->numerator << "/" << this->denominator << endl;
     }
 
     void add(fraction f2)
@@ -33,16 +33,16 @@ public:
     void simplify()
     {
         int gcd = 1;
-        int j = min(numerator, denominator);
+        int j = min(this->numerator, this->denominator);
         for (int i = 1; i <= j; i++)
         {
-            if (numerator % i == 0 && denominator % i == 0)
+            if (this->numerator % i == 0 && this->denominator % i == 0)
             {
                 gcd = i;
             }
         }
 
-        numerator = numerator / gcd;
-        denominator = denominator / gcd;
+        this->numerator = this->numerator / gcd;
+        this->denominator = this->denominator / gcd;
     }
 };
