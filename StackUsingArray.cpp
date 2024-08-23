@@ -33,7 +33,7 @@ public:
     {
         if (nextIndex == capacity)
         {
-            cout << "stack is full" << end;
+            cout << "stack is full" << endl;
             return;
         }
         data[nextIndex] == element;
@@ -47,8 +47,9 @@ public:
             cout << "stack is empty" << endl;
             return INT_MIN;
         }
+
         nextIndex--;
-        data[nextIndex];
+        return data[nextIndex];
     }
 
     int top()
@@ -56,7 +57,7 @@ public:
         if (isEmpty())
         {
             cout << "stack is empty" << endl;
-            return;
+            return INT_MIN;
         }
         return data[nextIndex - 1];
     }
