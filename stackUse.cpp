@@ -12,6 +12,7 @@ int main()
     s1.push(50);
 
     cout << s1.top() << endl;
+
     cout << s1.pop() << endl;
     cout << s1.pop() << endl;
     cout << s1.pop() << endl;

@@ -26,7 +26,15 @@ public:
 
     bool isEmpty()
     {
-        return nextIndex == 0;
+        // return nextIndex == 0;
+        if (nextIndex == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     void push(int element)
@@ -36,7 +44,7 @@ public:
             cout << "stack is full" << endl;
             return;
         }
-        data[nextIndex] == element;
+        data[nextIndex] = element;
         nextIndex++;
     }
 
