@@ -1,5 +1,5 @@
 template <typename T>
-class pair
+class Pair
 {
     T x;
     T y;
@@ -14,13 +14,13 @@ public:
         return x;
     }
 
-    void set(T y)
+    void setY(T y)
     {
         this->y = y;
     }
 
-    T getX()
+    T getY()
     {
-        return x;
+        return y;
     }
 };
