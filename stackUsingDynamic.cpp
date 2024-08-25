@@ -1,3 +1,6 @@
+/*
+here we are you array only , but we don't have to specify size , as in the code array double its size itself , usiing dynamic allocation concept
+*/
 #include <iostream>
 using namespace std;
 #include <climits>
