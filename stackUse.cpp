@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
-#include "StackUsingArray.cpp"
+#include "stackUsingDynamic.cpp"
 
 int main()
 {
-    StackUsingArray s1(4);
+    stackUsingDynamic s1;
     s1.push(10);
     s1.push(20);
     s1.push(30);
