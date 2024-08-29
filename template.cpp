@@ -1,8 +1,8 @@
-template <typename T>
+template <typename T, typename V>
 class Pair
 {
     T x;
-    T y;
+    V y;
 
 public:
     void setX(T x)
@@ -14,12 +14,12 @@ public:
         return x;
     }
 
-    void setY(T y)
+    void setY(V y)
     {
         this->y = y;
     }
 
-    T getY()
+    V getY()
     {
         return y;
     }
