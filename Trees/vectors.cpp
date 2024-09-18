@@ -5,6 +5,12 @@ using namespace std;
 int main()
 {
     vector<int> v;
+
+    /*
+    dynamically
+    vector<int> *vp = new vector<int>();
+    */
+
     v.push_back(10);
     v.push_back(20);
     v.push_back(30);
@@ -22,9 +28,4 @@ int main()
     cout << "size: " << v.size() << endl;
     v.pop_back();
     cout << "size: " << v.size() << endl;
-
-    /*
-    dynamically
-    vector<int> *vp = new vector<int>();
-    */
 }
