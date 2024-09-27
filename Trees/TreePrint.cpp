@@ -7,12 +7,17 @@ void printTree(TreeNode<int> *root)
 
     // edge case (not the base case)
     // base case is the case that comes after completing the recurssion cycle in the end
+
     if (root == NULL)
     {
         return;
     }
 
+    // this is the base case , this is where the codition comes after the recurssion
+
     cout << root->data << ":";
+
+    // printing the children of the root node
 
     for (int i = 0; i < root->children.size(); i++)
     {
@@ -20,6 +25,8 @@ void printTree(TreeNode<int> *root)
     }
 
     cout << endl;
+
+    // printing the further nodes and unke children through recursion
 
     for (int i = 0; i < root->children.size(); i++)
     {
