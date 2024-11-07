@@ -45,7 +45,7 @@ TreeNode<int> *takeInputLevelWise()
 
         for (int i = 0; i < numchild; i++)
         {
-            cout << "enter the " << i << "th child of <<front->data" << endl;
+            cout << "enter the " << i << "th child of " << front->data << endl;
             int childData;
             cin >> childData;
 
