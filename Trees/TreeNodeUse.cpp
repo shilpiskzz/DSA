@@ -1,13 +1,64 @@
 #include <iostream>
 using namespace std;
 #include "treeNode.h"
+#include <queue>
+
+void printTree(TreeNode<int> *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    cout << root->data << ":";
+
+    for (int i = 0; i < root->children.size(); i++)
+    {
+        cout << root->children[i]->data << ",";
+    }
+    cout << endl;
+
+    for (int i = 0; i < root->children.size(); i++)
+    {
+        printTree(root->children[i]);
+    }
+}
+
+TreeNode<int> *takeInputLevelWise()
+{
+
+    int rootData;
+    cout << "enter the root data :" << endl;
+    cin >> rootData;
+    TreeNode<int> *root = new TreeNode<int>(rootData);
+
+    queue<TreeNode<int> *> pendingNodesQueue;
+    pendingNodesQueue.push(root);
+
+    while (pendingNodesQueue.size() != 0)
+    {
+        TreeNode<int> *front = pendingNodesQueue.front();
+        pendingNodesQueue.pop();
+
+        cout << "enter number of children of" << front->data << endl;
+        int numchild;
+        cin >> numchild;
+
+        for (int i = 0; i < numchild; i++)
+        {
+            cout << "enter the " << i << "th child of <<front->data" << endl;
+            int childData;
+            cin >> childData;
+
+            TreeNode<int> *Child = new TreeNode<int>(childData);
+            front->children.push_back(Child);
+            pendingNodesQueue.push(Child);
+        }
+    }
+    return root;
+}
 
 int main()
 {
-    TreeNode<int> *rootNode = new TreeNode<int>(10); // this is not a vector , yeh ek treenode type ka object hai
-    TreeNode<int> *node1 = new TreeNode<int>(2);
-    TreeNode<int> *node2 = new TreeNode<int>(3);
-
-    rootNode->children.push_back(node1);
-    rootNode->children.push_back(node2);
+    TreeNode<int> *root = takeInputLevelWise();
+    printTree(root);
 }
