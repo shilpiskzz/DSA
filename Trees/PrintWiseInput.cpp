@@ -24,7 +24,11 @@ void printLevelWiseTree(TreeNode<int> *root)
         {
             // front ke children ka data print karna hai , don't forget the data part
             // bacusse its like linked list only , data and address hai and we have to print the data
-            cout << front->children[i]->data << " , ";
+            cout << front->children[i]->data;
+            if (i != front->children.size() - 1)
+            {
+                cout << ",";
+            }
             pendingNodesQueue.push(front->children[i]);
         }
 
