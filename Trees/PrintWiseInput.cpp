@@ -5,6 +5,29 @@ using namespace std;
 
 void printLevelWiseTree(TreeNode<int> *root)
 {
+    if (root == nullptr)
+    {
+        return;
+    }
+
+    queue<TreeNode<int> *> pendingNodesQueue;
+    pendingNodesQueue.push(root);
+
+    while (!pendingNodesQueue.empty())
+    {
+        TreeNode<int> *front = pendingNodesQueue.front();
+        pendingNodesQueue.pop();
+
+        cout << front->data << ":";
+
+        for (int i = 0; i < front->children.size(); i++)
+        {
+            cout << front->children[i] << " , ";
+            pendingNodesQueue.push(front->children[i]);
+        }
+
+        cout << endl;
+    }
 }
 
 TreeNode<int> *takeInputLevelWise()
