@@ -11,7 +11,8 @@ int NumNodes(TreeNode<int> *root)
     {
         ans += NumNodes(root->children[i]);
     }
-    cout << "the numbers of nodes are:";
+
+    // cout << "the numbers of nodes are:";
     return ans;
 }
 
@@ -33,7 +34,7 @@ int getHeight(TreeNode<int> *root)
             height = childHeight;
         }
     }
-    cout << "the height of the tree is";
+    // cout << "the height of the tree is ";
     return height + 1;
 }
 
