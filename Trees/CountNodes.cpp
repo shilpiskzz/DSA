@@ -38,6 +38,27 @@ int getHeight(TreeNode<int> *root)
     return height + 1;
 }
 
+// PRINT AT LEVEL
+
+void printAtLevel(TreeNode<int> *root, int k)
+{
+    if (root == nullptr)
+    {
+        return;
+    }
+
+    if (k == 0)
+    {
+        cout << root->data << endl;
+        return;
+    }
+
+    for (int i = 0; i < root->children.size(); i++)
+    {
+        printAtLevel(root->children[i], k - 1);
+    }
+}
+
 void printLevelWiseTree(TreeNode<int> *root)
 {
     if (root == nullptr)
