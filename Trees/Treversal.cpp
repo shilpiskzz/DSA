@@ -17,6 +17,20 @@ void preorder(TreeNode<int> *root)
     }
 }
 
+void postorder(TreeNode<int> *root)
+{
+    if (root == nullptr)
+    {
+        return;
+    }
+
+    for (int i = 0; i < root->children.size(); i++)
+    {
+        preorder(root->children[i]);
+    }
+    cout << root->data << " ";
+}
+
 TreeNode<int> *takeInputLevelWise()
 {
     int rootData;
@@ -53,4 +67,6 @@ TreeNode<int> *takeInputLevelWise()
 int main()
 {
     TreeNode<int> *root = takeInputLevelWise();
+    preorder(root);
+    postorder(root);
 }
