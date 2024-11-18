@@ -93,3 +93,23 @@ BinaryTreeNode<int> *deletion(BinaryTreeNode<int> *node, int value)
         return node;
     }
 }
+
+bool searchInBST(BinaryTreeNode<int> *root, int k)
+{
+    if (root == NULL)
+    {
+        return false;
+    }
+    if (root->data == k)
+    {
+        return true;
+    }
+    if (k < root->data)
+    {
+        return searchInBST(root->left, k);
+    }
+    else
+    {
+        return searchInBST(root->right, k);
+    }
+}
