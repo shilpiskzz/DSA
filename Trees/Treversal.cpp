@@ -67,6 +67,7 @@ TreeNode<int> *takeInputLevelWise()
 int main()
 {
     TreeNode<int> *root = takeInputLevelWise();
-    preorder(root);
+    // preorder(root);
+    cout << endl;
     postorder(root);
 }
