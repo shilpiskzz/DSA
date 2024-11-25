@@ -4,12 +4,11 @@
 using namespace std;
 #include "BinaryTree.h"
 #include <vector>
-#include <queue>
 #include <climits>
 
 vector<int> FindHeight(BinaryTreeNode<int> *root)
 {
-    if (root = nullptr)
+    if (root == nullptr)
     {
         return {INT_MAX, INT_MIN, 0};
     }
@@ -17,7 +16,7 @@ vector<int> FindHeight(BinaryTreeNode<int> *root)
     vector<int> L = FindHeight(root->left);
     vector<int> R = FindHeight(root->right);
 
-    vector<int> result;
+    vector<int> result(3);
 
     // valid condition : root->data > L[1] && root->data < R[0]
     if (root->data > L[1] && root->data < R[0])
