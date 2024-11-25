@@ -39,28 +39,45 @@ vector<int> FindHeight(BinaryTreeNode<int> *root)
 int main()
 {
     BinaryTreeNode<int> *root = new BinaryTreeNode<int>(8);
-    BinaryTreeNode<int> *root1 = new BinaryTreeNode<int>(3);
-    BinaryTreeNode<int> *root2 = new BinaryTreeNode<int>(10);
-    root->right = root2;
-    root->left = root1;
+    root->left = new BinaryTreeNode<int>(3);
+    root->right = new BinaryTreeNode<int>(10);
 
-    BinaryTreeNode<int> *root3 = new BinaryTreeNode<int>(4);
-    BinaryTreeNode<int> *root4 = new BinaryTreeNode<int>(6);
-    root1->right = root4;
-    root1->left = root3;
+    BinaryTreeNode<int> *L = root->left;
+    BinaryTreeNode<int> *R = root->right;
 
-    BinaryTreeNode<int> *root5 = new BinaryTreeNode<int>(14);
-    root2->right = root5;
+    L->left = new BinaryTreeNode<int>(4);
+    R->right = new BinaryTreeNode<int>(14);
+    L->right = new BinaryTreeNode<int>(6);
 
-    BinaryTreeNode<int> *root6 = new BinaryTreeNode<int>(5);
-    BinaryTreeNode<int> *root7 = new BinaryTreeNode<int>(7);
-    root4->right = root7;
-    root4->left = root6;
+    BinaryTreeNode<int> *LR = L->right;
+    BinaryTreeNode<int> *RR = R->right;
 
-    BinaryTreeNode<int> *root8 = new BinaryTreeNode<int>(13);
-    root5->left = root8;
+    LR->left = new BinaryTreeNode<int>(5);
+    LR->right = new BinaryTreeNode<int>(7);
+    // BinaryTreeNode<int> *root = new BinaryTreeNode<int>(8);
+    // BinaryTreeNode<int> *root1 = new BinaryTreeNode<int>(3);
+    // BinaryTreeNode<int> *root2 = new BinaryTreeNode<int>(10);
+    // root->right = root2;
+    // root->left = root1;
+
+    // BinaryTreeNode<int> *root3 = new BinaryTreeNode<int>(4);
+    // BinaryTreeNode<int> *root4 = new BinaryTreeNode<int>(6);
+    // root1->right = root4;
+    // root1->left = root3;
+
+    // BinaryTreeNode<int> *root5 = new BinaryTreeNode<int>(14);
+    // root2->right = root5;
+
+    // BinaryTreeNode<int> *root6 = new BinaryTreeNode<int>(5);
+    // BinaryTreeNode<int> *root7 = new BinaryTreeNode<int>(7);
+    // root4->right = root7;
+    // root4->left = root6;
+
+    // BinaryTreeNode<int> *root8 = new BinaryTreeNode<int>(13);
+    // root5->left = root8;
 
     cout << FindHeight(root)[2];
+
     // why this [2] beacuse
     //  FindHeigth(root) will return a vector
     // now we want height of that vector which is at index 2 i.e second position
