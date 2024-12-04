@@ -144,7 +144,6 @@ public:
 
 int main()
 {
-    // Singly Linked List
     SinglyLinkedList sList;
     sList.insert(10);
     sList.insert(20);
@@ -152,7 +151,6 @@ int main()
     cout << "Singly Linked List: ";
     sList.display();
 
-    // Doubly Linked List
     DoublyLinkedList dList;
     dList.insert(5);
     dList.insert(15);
@@ -160,13 +158,11 @@ int main()
     cout << "Doubly Linked List: ";
     dList.display();
 
-    // Circular Linked List
     CircularLinkedList cList;
     cList.insert(1);
     cList.insert(2);
     cList.insert(3);
     cout << "Circular Linked List: ";
     cList.display();
-
     return 0;
 }
