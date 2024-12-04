@@ -41,7 +41,6 @@ public:
 
         while (childINdex > 0)
         {
-
             int parentIndex = (childIndex - 1) / 2;
             if (pq[childIndex] < pq[parentIndex])
             {
@@ -49,9 +48,16 @@ public:
                 pq[childIndex] = pq[parentIndex];
                 pq[parentIndex] = temp;
             }
+            else
+            {
+                break;
+            }
 
             childIndex = parentIndex;
-            parentIndex = (childIndex - 1) / 2;
         }
+    }
+
+    int removeMin()
+    {
     }
 };
