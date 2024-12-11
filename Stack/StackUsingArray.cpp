@@ -67,6 +67,7 @@ public:
             cout << "stack is empty" << endl;
             return INT_MIN;
         }
+        // here we dont have to reduce the nextIndex as we have to just return the top value not delete it
         return data[nextIndex - 1];
     }
 };
