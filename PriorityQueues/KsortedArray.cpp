@@ -23,6 +23,7 @@ void ksortedArray(int input[], int n, int k)
     {
         input[j] = pq.top();
         pq.pop();
+        j++;
     }
 }
 
