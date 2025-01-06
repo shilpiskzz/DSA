@@ -5,6 +5,9 @@ using namespace std;
 int main()
 {
     priority_queue<int> pq;
+    // the inbuilt prioriy queue is by default max pq ie max heap
+    //  to convert it into min priority queue
+    // priority_queue<int , vector<int> , greater<int> >
 
     pq.push(16);
     pq.push(1);
